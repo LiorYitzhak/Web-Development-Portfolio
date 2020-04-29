@@ -1,10 +1,20 @@
+body, header, nav, div, a, svg
+,h1, h2, h3, h4, p {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
 :root {
     font-size: 10px;
 }
 
 body {
+    position: relative;
+
     padding: 0 $screen-padding;
     margin: auto;
+    box-sizing: border-box;
 
     font-family: 'Lato', sans-serif;
     font-size: $main-font-size;

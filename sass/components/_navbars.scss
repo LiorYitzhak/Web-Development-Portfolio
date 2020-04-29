@@ -1,0 +1,46 @@
+$nav-links-gap: 10rem;
+
+.header-main {
+    /*
+    position: fixed;
+    top: 0;
+    left: 0%;
+    right: 0%;
+    padding: 0 $screen-padding;
+    */
+
+    background-color: var(--light-mode);
+    // box-shadow: $box-shadow;
+
+    nav {
+        height: 8rem;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-right {
+            a:not(:last-of-type) {
+                margin-left: $nav-links-gap;
+            }
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+
+            direction: ltr;
+
+            svg {
+                cursor: pointer;
+
+                // &#accessibility-icon {width: 2.25rem;}
+                &#dark-mode-icon     {width: 2.5rem;} 
+                
+                &:not(:last-of-type) {
+                    margin-right: $nav-links-gap / 2;
+                }
+            }
+        }
+    }
+}
