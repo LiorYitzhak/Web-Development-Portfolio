@@ -1,0 +1,17 @@
+{
+  "name": "portfolio"
+  ,"version": "1.0.0"
+  ,"description": "My Portfolio - Web Design and Development"
+  ,"main": "app.js"
+
+  ,"scripts": {
+    "compileSass": "node-sass ./sass/main.scss ./public/style.css -w"
+  }
+
+  ,"author": "Lior Yitzhak"
+  ,"license": "ISC"
+  
+  ,"devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
