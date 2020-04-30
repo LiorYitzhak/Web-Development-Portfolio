@@ -16,5 +16,9 @@
             min-width: 25rem;
             max-width: 45rem;
         }
+
+        .btn {
+            margin-left: $main-components-gap;
+        }
     }
 }

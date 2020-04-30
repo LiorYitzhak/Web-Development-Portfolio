@@ -49,10 +49,20 @@ h1, h2, h3, h4 {
   font-weight: 700;
   margin-bottom: 4rem; }
 
+p {
+  margin-bottom: 2rem; }
+
 a:link
 , a:visited {
   color: var(--light-mode-text);
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center; }
+  a:link
+svg, a:visited svg {
+    width: 1.44rem;
+    height: 1.44rem;
+    margin-right: 0.5rem; }
 
 .header-main {
   position: fixed;
@@ -97,6 +107,13 @@ h1::before
   background-color: #FFC491;
   transform: translateX(2rem); }
 
+.btn {
+  cursor: pointer;
+  padding: .5rem 2rem;
+  background-color: #FFC491;
+  border: none;
+  border-radius: 0.5rem; }
+
 .homepage-grid {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -110,3 +127,5 @@ h1::before
   .homepage-grid main p {
     min-width: 25rem;
     max-width: 45rem; }
+  .homepage-grid main .btn {
+    margin-left: 2rem; }

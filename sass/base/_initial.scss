@@ -37,8 +37,21 @@ h1,h2,h3,h4 {
     margin-bottom: $main-components-gap * 2;
 }
 
+p {
+    margin-bottom: $main-components-gap;
+}
+
 a:link
 ,a:visited {
     color: var(--light-mode-text);
     text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+        width: $main-font-size * 0.9;
+        height: $main-font-size * 0.9;
+        margin-right: $main-components-gap / 4;
+    }
 }
