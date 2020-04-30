@@ -1,5 +1,5 @@
 body, header, nav, div, a, svg
-,h1, h2, h3, h4, p {
+main, section, article, h1, h2, h3, h4, p {
     padding: 0;
     margin: 0;
     box-sizing: inherit;
@@ -11,12 +11,13 @@ body, header, nav, div, a, svg
 
 body {
     position: relative;
+    overflow-x: hidden;
 
-    padding: 0 $screen-padding;
+    padding: 0 $screen-gap;
     margin: auto;
     box-sizing: border-box;
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Assistant', sans-serif;
     font-size: $main-font-size;
     font-weight: $main-font-weight;
     color: var(--light-mode-text);
@@ -31,23 +32,13 @@ h2 {font-size: $h2-font-size;}
 h3 {font-size: $h3-font-size;}
 h4 {font-size: $h4-font-size;}
 
-h1,h2,h3,h4 {font-weight: $heading-font-weight;}
+h1,h2,h3,h4 {
+    font-weight: $heading-font-weight;
+    margin-bottom: $main-components-gap * 2;
+}
 
 a:link
 ,a:visited {
     color: var(--light-mode-text);
     text-decoration: none;
-}
-
-.box {
-    width: 200px;
-    height: 200px;
-    box-shadow: $box-shadow;
-    animation: rotate 4s $easing-function forwards infinite;
-}
-
-@keyframes rotate {
-    0% {transform: rotateZ(0);}
-    25% {transform: rotateZ(360deg);}
-    100% {transform: rotateZ(360deg);}
 }

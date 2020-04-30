@@ -12,7 +12,7 @@
 /* Effects */
 /* Animations */
 body, header, nav, div, a, svg
-, h1, h2, h3, h4, p {
+main, section, article, h1, h2, h3, h4, p {
   padding: 0;
   margin: 0;
   box-sizing: inherit; }
@@ -22,10 +22,11 @@ body, header, nav, div, a, svg
 
 body {
   position: relative;
+  overflow-x: hidden;
   padding: 0 5%;
   margin: auto;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--light-mode-text);
@@ -45,35 +46,21 @@ h4 {
   font-size: 2.4rem; }
 
 h1, h2, h3, h4 {
-  font-weight: 900; }
+  font-weight: 700;
+  margin-bottom: 4rem; }
 
 a:link
 , a:visited {
   color: var(--light-mode-text);
   text-decoration: none; }
 
-.box {
-  width: 200px;
-  height: 200px;
-  box-shadow: 1rem 1rem 1.5rem #0000001a;
-  animation: rotate 4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards infinite; }
-
-@keyframes rotate {
-  0% {
-    transform: rotateZ(0); }
-  25% {
-    transform: rotateZ(360deg); }
-  100% {
-    transform: rotateZ(360deg); } }
-
 .header-main {
-  /*
-    position: fixed;
-    top: 0;
-    left: 0%;
-    right: 0%;
-    padding: 0 $screen-padding;
-    */
+  position: fixed;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  padding: 0 5%;
+  z-index: 1;
   background-color: var(--light-mode); }
   .header-main nav {
     height: 8rem;
@@ -81,14 +68,45 @@ a:link
     justify-content: space-between;
     align-items: center; }
     .header-main nav .nav-right a:not(:last-of-type) {
-      margin-left: 10rem; }
+      margin-left: 6rem; }
     .header-main nav .nav-left {
       display: flex;
       align-items: center;
       direction: ltr; }
       .header-main nav .nav-left svg {
         cursor: pointer; }
+        .header-main nav .nav-left svg#accessibility-icon {
+          width: 2.25rem; }
         .header-main nav .nav-left svg#dark-mode-icon {
           width: 2.5rem; }
         .header-main nav .nav-left svg:not(:last-of-type) {
-          margin-right: 5rem; }
+          margin-right: 3rem; }
+
+h1, h2 {
+  position: relative;
+  transform: translateX(-2rem); }
+
+h1::before
+, h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: .2rem;
+  border-radius: 5rem;
+  background-color: #FFC491;
+  transform: translateX(2rem); }
+
+.homepage-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 8rem 4rem;
+  margin: 12rem 0; }
+  .homepage-grid h1 {
+    line-height: .75; }
+  .homepage-grid .h1-secondary {
+    display: block;
+    font-size: 3.6rem; }
+  .homepage-grid main p {
+    min-width: 25rem;
+    max-width: 45rem; }

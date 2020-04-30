@@ -1,5 +1,6 @@
 /* Layout */
-    $screen-padding: 5%;
+    $screen-gap: 5%;
+    $main-components-gap: 2rem;
 
 /* Colors */
     :root {
@@ -32,7 +33,7 @@
     $h4-font-size: $main-font-size * 1.5;
 
     $main-font-weight: 400;
-    $heading-font-weight: 900;
+    $heading-font-weight: 700;
 
 /* Effects */
     $main-border-radius: .5rem;

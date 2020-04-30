@@ -1,0 +1,19 @@
+h1,h2 {
+    position: relative;
+    transform: translateX(-$main-components-gap);
+}
+
+h1::before
+,h2::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    padding: .2rem;
+    border-radius: $main-border-radius * 10;
+    background-color: $brand;
+
+    transform: translateX($main-components-gap);
+}

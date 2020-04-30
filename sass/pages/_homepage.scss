@@ -1,0 +1,20 @@
+.homepage-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: ($main-components-gap * 4) ($main-components-gap * 2);
+
+    margin: ($main-components-gap * 6) 0;
+
+    h1 {line-height: .75;}
+    .h1-secondary {
+        display: block;
+        font-size: $h2-font-size;
+    }
+
+    main {
+        p {
+            min-width: 25rem;
+            max-width: 45rem;
+        }
+    }
+}
