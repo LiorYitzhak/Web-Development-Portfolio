@@ -16,9 +16,21 @@
             min-width: 25rem;
             max-width: 45rem;
         }
-
+        
         .btn {
             margin-left: $main-components-gap;
+        }
+    }
+
+    .homepage-tech {
+        .tech-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, $tech-cards-width);
+            gap: $main-components-gap;
+
+            &:not(:last-of-type) {
+                margin-bottom: $main-components-gap * 2;
+            }
         }
     }
 }

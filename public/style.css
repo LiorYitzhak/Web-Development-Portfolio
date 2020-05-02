@@ -12,7 +12,8 @@
 /* Effects */
 /* Animations */
 body, header, nav, div, a, svg
-main, section, article, h1, h2, h3, h4, p {
+main, section, article, h1, h2, h3, h4,
+p, ul, li {
   padding: 0;
   margin: 0;
   box-sizing: inherit; }
@@ -37,17 +38,20 @@ h1 {
   font-size: 9.6rem; }
 
 h2 {
-  font-size: 3.6rem; }
+  font-size: 3.2rem; }
 
 h3 {
-  font-size: 1.6rem; }
+  font-size: 2rem; }
 
 h4 {
-  font-size: 2.4rem; }
+  font-size: 1.6rem; }
 
 h1, h2, h3, h4 {
   font-weight: 700;
   margin-bottom: 4rem; }
+
+h3, h4 {
+  margin-bottom: 1rem; }
 
 p {
   margin-bottom: 2rem; }
@@ -63,6 +67,9 @@ svg, a:visited svg {
     width: 1.44rem;
     height: 1.44rem;
     margin-right: 0.5rem; }
+
+ul {
+  list-style: none; }
 
 .header-main {
   position: fixed;
@@ -92,6 +99,7 @@ svg, a:visited svg {
         .header-main nav .nav-left svg:not(:last-of-type) {
           margin-right: 3rem; }
 
+/* Headings Mark */
 h1, h2 {
   position: relative;
   transform: translateX(-2rem); }
@@ -109,10 +117,78 @@ h1::before
 
 .btn {
   cursor: pointer;
+  font-size: 1.6rem;
+  color: var(--light-mode-text);
   padding: .5rem 2rem;
   background-color: #FFC491;
   border: none;
   border-radius: 0.5rem; }
+
+/* Tech Card */
+.tech-card {
+  max-width: 30rem;
+  display: flex;
+  align-items: center;
+  transform: translate(3.5rem, 1.2rem); }
+  .tech-card .tech-details-list
+, .tech-card .tech-details-paragraph {
+    width: 27.5rem;
+    height: 11rem;
+    text-align: left;
+    padding: 1rem 2rem;
+    background-color: var(--light-mode-card);
+    border-radius: 1rem;
+    box-shadow: 0.75rem 0.75rem 1.25rem rgba(0, 0, 0, 0.06); }
+  .tech-card .tech-details-paragraph {
+    text-align: right;
+    padding: 1rem 6rem 1rem 2rem; }
+  .tech-card .tech-id {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; }
+    .tech-card .tech-id .tech-name {
+      position: absolute;
+      transform: translate(-3.5rem, -125%); }
+    .tech-card .tech-id .tech-img {
+      width: 7rem;
+      height: 7rem;
+      position: relative;
+      border-radius: 0.5rem;
+      transform: translateX(-3.5rem); }
+      .tech-card .tech-id .tech-img.html {
+        background-color: #F26449; }
+      .tech-card .tech-id .tech-img.css {
+        background-color: #69C3FF; }
+      .tech-card .tech-id .tech-img.sass {
+        background-color: #F489B4; }
+      .tech-card .tech-id .tech-img.js {
+        background-color: #FFB433; }
+      .tech-card .tech-id .tech-img.nodejs {
+        background-color: #76CF55; }
+      .tech-card .tech-id .tech-img.sql {
+        background-color: #D790ED; }
+      .tech-card .tech-id .tech-img.adobe-xd {
+        background-color: #F489B4; }
+      .tech-card .tech-id .tech-img.ps {
+        background-color: #69C3FF; }
+      .tech-card .tech-id .tech-img.ai {
+        background-color: #FFB433; }
+      .tech-card .tech-id .tech-img.git {
+        background-color: #F26449; }
+      .tech-card .tech-id .tech-img svg {
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: #FFF; }
+      .tech-card .tech-id .tech-img.nodejs svg {
+        width: 55%; }
+      .tech-card .tech-id .tech-img.js svg, .tech-card .tech-id .tech-img.adobe-xd svg, .tech-card .tech-id .tech-img.ps svg, .tech-card .tech-id .tech-img.ai svg, .tech-card .tech-id .tech-img.git svg {
+        width: 60%; }
+      .tech-card .tech-id .tech-img.sass svg {
+        width: 70%; }
 
 .homepage-grid {
   display: grid;
@@ -123,9 +199,15 @@ h1::before
     line-height: .75; }
   .homepage-grid .h1-secondary {
     display: block;
-    font-size: 3.6rem; }
+    font-size: 3.2rem; }
   .homepage-grid main p {
     min-width: 25rem;
     max-width: 45rem; }
   .homepage-grid main .btn {
     margin-left: 2rem; }
+  .homepage-grid .homepage-tech .tech-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 30rem);
+    gap: 2rem; }
+    .homepage-grid .homepage-tech .tech-cards-grid:not(:last-of-type) {
+      margin-bottom: 4rem; }

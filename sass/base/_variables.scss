@@ -22,22 +22,22 @@
     $green:          #76CF55;
     $purple:         #D790ED;
 
-    $shadow:         #0000001a;
+    $shadow:         rgba(0, 0, 0, 0.06);
 
 /* Typography */
     $main-font-size: 1.6rem;
 
     $h1-font-size: $main-font-size * 6;
-    $h2-font-size: $main-font-size * 2.25;
-    $h3-font-size: $main-font-size * 1;
-    $h4-font-size: $main-font-size * 1.5;
+    $h2-font-size: $main-font-size * 2;
+    $h3-font-size: $main-font-size * 1.25;
+    $h4-font-size: $main-font-size * 1;
 
     $main-font-weight: 400;
     $heading-font-weight: 700;
 
 /* Effects */
     $main-border-radius: .5rem;
-    $box-shadow: 1rem 1rem 1.5rem $shadow;
+    $box-shadow: 0.75rem 0.75rem 1.25rem $shadow;
 
 /* Animations */
     $easing-function: cubic-bezier(0.34, 1.56, 0.64, 1);

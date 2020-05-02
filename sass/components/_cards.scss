@@ -1,0 +1,99 @@
+/* Tech Card */
+    $tech-cards-width: 30rem;
+    $tech-cards-height: 11rem;
+    $tech-card-translateX: 3.5rem;
+
+    .tech-card {
+        max-width: $tech-cards-width;
+
+        display: flex;
+        align-items: center;
+
+        transform: translate($tech-card-translateX, 1.2rem);
+
+        .tech-details-list
+        ,.tech-details-paragraph {
+            width: 27.5rem;
+            height: $tech-cards-height;
+
+            text-align: left;
+
+            padding: 1rem 2rem;
+            background-color: var(--light-mode-card);
+            border-radius: $main-border-radius * 2;
+            box-shadow: $box-shadow;
+        }
+
+        .tech-details-paragraph {
+            text-align: right;
+            padding: 1rem 6rem 1rem 2rem;
+        }
+
+        .tech-id {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            position: relative;
+
+            .tech-name {
+                position: absolute;
+                transform: translate(-$tech-card-translateX, -125%);
+            }
+
+            .tech-img {
+                width: 7rem;
+                height: 7rem;
+
+                position: relative;
+
+                border-radius: $main-border-radius;
+
+                transform: translateX(-$tech-card-translateX);
+
+                &.html          {background-color: $red;}
+                &.css           {background-color: $blue;}
+                &.sass          {background-color: $pink;}
+                &.js            {background-color: $yellow;}
+                &.nodejs        {background-color: $green;}
+                &.sql           {background-color: $purple;}
+                &.adobe-xd      {background-color: $pink;}
+                &.ps            {background-color: $blue;}
+                &.ai            {background-color: $yellow;}
+                &.git           {background-color: $red;}
+
+                svg {
+                    width: 50%;
+
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    fill: #FFF;
+                }
+
+                &.nodejs {
+                    svg {
+                        width: 55%;
+                    }
+                }
+
+                &.js
+                ,&.adobe-xd
+                ,&.ps
+                ,&.ai
+                ,&.git {
+                    svg {
+                        width: 60%;
+                    }
+                }
+
+                &.sass {
+                    svg {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }

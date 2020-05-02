@@ -1,5 +1,8 @@
 .btn {
     cursor: pointer;
+
+    font-size: $main-font-size;
+    color: var(--light-mode-text);
     
     padding: .5rem 2rem;
     background-color: $brand;

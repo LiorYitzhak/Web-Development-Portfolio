@@ -1,5 +1,6 @@
 body, header, nav, div, a, svg
-main, section, article, h1, h2, h3, h4, p {
+main, section, article, h1, h2, h3, h4,
+p, ul, li {
     padding: 0;
     margin: 0;
     box-sizing: inherit;
@@ -37,6 +38,10 @@ h1,h2,h3,h4 {
     margin-bottom: $main-components-gap * 2;
 }
 
+h3,h4 {
+    margin-bottom: $main-components-gap / 2;
+}
+
 p {
     margin-bottom: $main-components-gap;
 }
@@ -54,4 +59,8 @@ a:link
         height: $main-font-size * 0.9;
         margin-right: $main-components-gap / 4;
     }
+}
+
+ul {
+    list-style: none;
 }
