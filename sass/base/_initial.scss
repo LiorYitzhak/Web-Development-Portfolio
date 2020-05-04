@@ -12,7 +12,7 @@ p, ul, li {
 
 body {
     position: relative;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
     padding: 0 $screen-gap;
     margin: auto;
@@ -63,4 +63,10 @@ a:link
 
 ul {
     list-style: none;
+}
+
+.highlight {
+    color: var(--dark-mode);
+    background-color: $brand;
+    border-radius: $main-border-radius / 2;
 }

@@ -1,4 +1,5 @@
-.btn {
+.btn
+,.btn-inverse {
     cursor: pointer;
 
     font-size: $main-font-size;
@@ -8,4 +9,11 @@
     background-color: $brand;
     border: none;
     border-radius: $main-border-radius;
+}
+
+.btn-inverse {
+    color: $brand;
+    padding: .3rem 1.8rem;
+    background-color: transparent;
+    border: .2rem solid $brand;
 }

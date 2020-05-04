@@ -97,3 +97,29 @@
             }
         }
     }
+
+/* Homepage Project Card */
+    .homepage-project-card {
+        display: grid;
+        grid-template-columns: 0.65fr 0.35fr;
+        gap: $main-components-gap / 2 $main-components-gap * 1.5;
+
+        .heading    {grid-area: 1/1/2/2;}
+        a           {grid-area: 2/1/3/2;}
+        p           {grid-area: 2/2/3/3;}
+
+        h4,p {margin: 0;}
+
+        .heading {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+
+            h4 {font-size: $h3-font-size;}
+
+            aside {padding: .2rem 1rem;}
+        }
+
+        img {width: 100%;}
+    }

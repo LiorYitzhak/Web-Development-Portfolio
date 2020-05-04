@@ -1,7 +1,7 @@
 .homepage-grid {
     display: grid;
     grid-template-columns: 1.25fr 0.75fr;
-    gap: ($main-components-gap * 4) ($main-components-gap * 2);
+    column-gap: $main-components-gap * 2;
 
     margin: ($main-components-gap * 6) 0;
 
@@ -17,9 +17,15 @@
             max-width: 45rem;
         }
         
-        .btn {
+        .btn
+        ,.btn-inverse {
             margin-left: $main-components-gap;
         }
+    }
+
+    .homepage-tech
+    ,.homepage-projects {
+        padding-top: $main-components-gap * 4;
     }
 
     .homepage-resources-heading
@@ -48,6 +54,24 @@
 
             &:not(:last-of-type) {
                 margin-bottom: $main-components-gap * 2;
+            }
+        }
+    }
+
+    .homepage-projects {
+        .homepage-project-card {
+            margin-bottom: $main-components-gap * 2;
+
+            &:nth-of-type(even) {
+                direction: ltr;
+    
+                .heading {flex-direction: row;}
+
+                p {direction: rtl;}
+            }
+
+            &:last-of-type {
+                margin-bottom: $main-components-gap * 4;
             }
         }
     }

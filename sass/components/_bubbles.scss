@@ -5,6 +5,8 @@
         width: $resources-bubble-svg-size;
         display: inline-block;
 
+        direction: ltr;
+
         a {
             display: inline-flex;
             flex-direction: column-reverse;
