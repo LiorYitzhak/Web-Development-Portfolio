@@ -9,6 +9,6 @@ body {
 
     &::-webkit-scrollbar-thumb {
         background-color: $brand;
-        border-radius: 5rem;
+        border-radius: $main-border-radius * 5;
     }
 }

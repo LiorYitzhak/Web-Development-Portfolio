@@ -1,0 +1,31 @@
+/* Resources Bubble */
+    $resources-bubble-svg-size: 8rem;
+    
+    .resources-bubble {
+        width: $resources-bubble-svg-size;
+        display: inline-block;
+
+        a {
+            display: inline-flex;
+            flex-direction: column-reverse;
+
+            text-align: center;
+
+            h4 {
+                font-weight: $main-font-weight;
+            }
+
+            svg
+            ,img {
+                width: $resources-bubble-svg-size;
+                height: $resources-bubble-svg-size;
+
+                border-radius: $main-border-radius;
+                margin-bottom: $main-components-gap / 4;
+            }
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }

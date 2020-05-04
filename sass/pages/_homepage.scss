@@ -22,6 +22,24 @@
         }
     }
 
+    .homepage-resources-heading
+    ,.homepage-projects-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        a {transform: translateY(50%);}
+    }
+
+    .homepage-resources {
+        ul {
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: $main-components-gap;
+        }
+    }
+
     .homepage-tech {
         .tech-cards-grid {
             display: grid;
