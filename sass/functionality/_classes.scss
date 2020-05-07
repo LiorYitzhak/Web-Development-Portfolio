@@ -1,0 +1,13 @@
+.dark-mode {
+    background-color: var(--dark-mode);
+    color: var(--dark-mode-text);
+
+    .header-main {
+        background-color: var(--dark-mode);
+    }
+
+    .tech-details-list
+    ,.tech-details-paragraph {
+        background-color: var(--dark-mode-tech-card) !important;
+    }
+}
