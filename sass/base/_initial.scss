@@ -1,9 +1,14 @@
 body, header, nav, div, a, svg
 main, section, article, aside
-,h1, h2, h3, h4, p, ul, li {
+,h1, h2, h3, h4, p, ul, li, button
+,form, input, textarea {
     padding: 0;
     margin: 0;
     box-sizing: inherit;
+
+    &:focus {
+        outline: 2px solid rgba($brand,.5);
+    }
 }
 
 :root {
@@ -12,10 +17,7 @@ main, section, article, aside
 
 body {
     position: relative;
-    // overflow-x: hidden;
 
-    padding: 0 $screen-gap;
-    margin: auto;
     box-sizing: border-box;
 
     font-family: 'Assistant', sans-serif;
@@ -26,6 +28,11 @@ body {
     direction: rtl;
 
     background-color: var(--light-mode);
+}
+
+.body-container {
+    padding: 0 $screen-gap;
+    margin: auto;
 }
 
 h1 {font-size: $h1-font-size;}
@@ -64,6 +71,17 @@ a:link
 ul {
     list-style: none;
 }
+
+button {
+    cursor: pointer;
+    
+    color: currentColor;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+input[type=submit] {cursor: pointer;}
 
 .highlight {
     color: var(--dark-mode);

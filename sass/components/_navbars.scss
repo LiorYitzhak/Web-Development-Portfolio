@@ -29,11 +29,9 @@
 
             direction: ltr;
 
-            svg {
-                cursor: pointer;
-
+            button {
                 &#accessibility-icon {width: 2.25rem;}
-                &#dark-mode-icon     {width: 2.5rem;} 
+                &#dark-mode-icon     {width: 2.5rem;}
                 
                 &:not(:last-of-type) {
                     margin-right: $main-components-gap * 1.5;

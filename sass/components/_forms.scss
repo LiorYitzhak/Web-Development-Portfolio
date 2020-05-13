@@ -1,0 +1,31 @@
+.input-group {
+    label {
+        display: block;
+
+        font-size: $h3-font-size;
+        margin-bottom: $main-components-gap / 4;
+    }
+
+    input
+    ,textarea {
+        width: 100%;
+        display: block;
+
+        color: var(--light-mode-text);
+        font-size: inherit;
+        padding: 1rem;
+        border: 1px solid $form-border-color;
+        border-radius: $main-border-radius;
+    }
+
+    // input {
+    //     &:valid {
+    //         // border-color: currentColor;
+    //     }
+    // }
+
+    textarea {
+        resize: none;
+        font-family: inherit;
+    }
+}

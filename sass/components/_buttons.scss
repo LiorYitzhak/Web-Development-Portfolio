@@ -1,11 +1,9 @@
 .btn
 ,.btn-inverse {
-    cursor: pointer;
-
-    font-size: $main-font-size;
-    color: var(--light-mode-text);
+    font-size: $h3-font-size;
+    color: var(--dark-mode);
     
-    padding: .5rem 2rem;
+    padding: .75rem 2.5rem;
     background-color: $brand;
     border: none;
     border-radius: $main-border-radius;

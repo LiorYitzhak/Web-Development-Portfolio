@@ -1,0 +1,50 @@
+.modal-screen {
+    width: 100vw;
+    height: 100vh;
+
+    min-width: 800px;
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    background-color: $modal-screen;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+
+    .homepage-contact-modal {
+        flex-basis: 50rem;
+
+        position: relative;
+
+        background-color: var(--light-mode);
+        padding: 3rem;
+        padding-top: 4rem;
+        border-radius: $main-border-radius;
+
+        .close-modal {
+            position: absolute;
+            top: .5rem;
+            right: 1rem;
+
+            font-size: $main-font-size * 1.5;
+            color: currentColor;
+        }
+
+        h2 {
+            font-size: $h2-font-size * 2;
+            line-height: .8;
+            margin-bottom: $main-components-gap / 1.5;
+        }
+
+        form {
+            .input-group    {margin-bottom: $main-components-gap / 4;}
+            .textarea-group {margin-bottom: $main-components-gap;}
+
+            .btn {padding: .75rem 5rem;}
+        }
+    }
+}

@@ -22,7 +22,9 @@
     $green:          #76CF55;
     $purple:         #D790ED;
 
-    $shadow:         rgba(0, 0, 0, 0.06);
+    $shadow:                        rgba(0, 0, 0, .06);
+    $modal-screen:                  rgba(0, 0, 0, 0.75);
+    $form-border-color: rgba(68, 68, 68, .25);
 
 /* Typography */
     $main-font-size: 1.6rem;

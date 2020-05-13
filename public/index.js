@@ -3,6 +3,11 @@ const body                  = document.body;
 
 const darkModeBtn           = body.querySelector('#dark-mode-icon');
 
+const contactBtn            = body.querySelector('.btn-contact');
+const modalScreens        = Array.from(body.querySelectorAll('.contact-modal-screen'));
+const contactModalScreen    = body.querySelector('.contact-modal-screen'); 
+const closeModalBtn         = body.querySelector('.close-modal'); 
+
 function addClass(arr, className) {
     arr.forEach(element => element.classList.add(className));
 }
@@ -18,6 +23,16 @@ darkModeBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark');
     }
     else {localStorage.removeItem('theme');}
+});
+
+contactBtn.addEventListener('click', () => {
+    contactModalScreen.style.display = 'flex';
+});
+
+closeModalBtn.addEventListener('click', () => {
+    modalScreens.forEach((modalScreen) => {
+        modalScreen.style.display = 'none';
+    });
 });
 
 const theme = localStorage.getItem('theme');

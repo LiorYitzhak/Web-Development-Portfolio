@@ -13,18 +13,22 @@
 /* Animations */
 body, header, nav, div, a, svg
 main, section, article, aside
-, h1, h2, h3, h4, p, ul, li {
+, h1, h2, h3, h4, p, ul, li, button
+, form, input, textarea {
   padding: 0;
   margin: 0;
   box-sizing: inherit; }
+  body:focus, header:focus, nav:focus, div:focus, a:focus, svg
+main:focus, section:focus, article:focus, aside:focus
+, h1:focus, h2:focus, h3:focus, h4:focus, p:focus, ul:focus, li:focus, button:focus
+, form:focus, input:focus, textarea:focus {
+    outline: 2px solid rgba(255, 196, 145, 0.5); }
 
 :root {
   font-size: 10px; }
 
 body {
   position: relative;
-  padding: 0 5%;
-  margin: auto;
   box-sizing: border-box;
   font-family: 'Assistant', sans-serif;
   font-size: 1.6rem;
@@ -32,6 +36,10 @@ body {
   color: var(--light-mode-text);
   direction: rtl;
   background-color: var(--light-mode); }
+
+.body-container {
+  padding: 0 5%;
+  margin: auto; }
 
 h1 {
   font-size: 9.6rem; }
@@ -70,6 +78,16 @@ svg, a:visited svg {
 ul {
   list-style: none; }
 
+button {
+  cursor: pointer;
+  color: currentColor;
+  padding: 0;
+  background-color: transparent;
+  border: none; }
+
+input[type=submit] {
+  cursor: pointer; }
+
 .highlight {
   color: var(--dark-mode);
   background-color: #FFC491;
@@ -94,14 +112,12 @@ ul {
       display: flex;
       align-items: center;
       direction: ltr; }
-      .header-main nav .nav-left svg {
-        cursor: pointer; }
-        .header-main nav .nav-left svg#accessibility-icon {
-          width: 2.25rem; }
-        .header-main nav .nav-left svg#dark-mode-icon {
-          width: 2.5rem; }
-        .header-main nav .nav-left svg:not(:last-of-type) {
-          margin-right: 3rem; }
+      .header-main nav .nav-left button#accessibility-icon {
+        width: 2.25rem; }
+      .header-main nav .nav-left button#dark-mode-icon {
+        width: 2.5rem; }
+      .header-main nav .nav-left button:not(:last-of-type) {
+        margin-right: 3rem; }
 
 /* Headings Mark */
 h1, h2 {
@@ -121,10 +137,9 @@ h1::before
 
 .btn
 , .btn-inverse {
-  cursor: pointer;
-  font-size: 1.6rem;
-  color: var(--light-mode-text);
-  padding: .5rem 2rem;
+  font-size: 2rem;
+  color: var(--dark-mode);
+  padding: .75rem 2.5rem;
   background-color: #FFC491;
   border: none;
   border-radius: 0.5rem; }
@@ -137,13 +152,13 @@ h1::before
 
 /* Tech Card */
 .tech-card {
-  max-width: 30rem;
+  max-width: 32rem;
   display: flex;
   align-items: center;
   transform: translate(3.5rem, 1.2rem); }
   .tech-card .tech-details-list
 , .tech-card .tech-details-paragraph {
-    width: 27.5rem;
+    width: 32rem;
     height: 11rem;
     text-align: left;
     padding: 1rem 2rem;
@@ -223,6 +238,8 @@ h1::before
       font-size: 2rem; }
     .homepage-project-card .heading aside {
       padding: .2rem 1rem; }
+  .homepage-project-card a {
+    box-shadow: 0.75rem 0.75rem 1.25rem rgba(0, 0, 0, 0.06); }
   .homepage-project-card img {
     width: 100%; }
 
@@ -244,6 +261,60 @@ h1::before
       margin-bottom: 0.5rem; }
     .resources-bubble a img {
       object-fit: cover; }
+
+.input-group label {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem; }
+
+.input-group input
+, .input-group textarea {
+  width: 100%;
+  display: block;
+  color: var(--light-mode-text);
+  font-size: inherit;
+  padding: 1rem;
+  border: 1px solid rgba(68, 68, 68, 0.25);
+  border-radius: 0.5rem; }
+
+.input-group textarea {
+  resize: none;
+  font-family: inherit; }
+
+.modal-screen {
+  width: 100vw;
+  height: 100vh;
+  min-width: 800px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center; }
+  .modal-screen .homepage-contact-modal {
+    flex-basis: 50rem;
+    position: relative;
+    background-color: var(--light-mode);
+    padding: 3rem;
+    padding-top: 4rem;
+    border-radius: 0.5rem; }
+    .modal-screen .homepage-contact-modal .close-modal {
+      position: absolute;
+      top: .5rem;
+      right: 1rem;
+      font-size: 2.4rem;
+      color: currentColor; }
+    .modal-screen .homepage-contact-modal h2 {
+      font-size: 6.4rem;
+      line-height: .8;
+      margin-bottom: 1.33333rem; }
+    .modal-screen .homepage-contact-modal form .input-group {
+      margin-bottom: 0.5rem; }
+    .modal-screen .homepage-contact-modal form .textarea-group {
+      margin-bottom: 2rem; }
+    .modal-screen .homepage-contact-modal form .btn {
+      padding: .75rem 5rem; }
 
 .homepage-grid {
   display: grid;
@@ -278,7 +349,7 @@ a, .homepage-grid .homepage-projects-heading a {
     margin-bottom: 2rem; }
   .homepage-grid .homepage-tech .tech-cards-grid {
     display: grid;
-    grid-template-columns: repeat(2, 30rem);
+    grid-template-columns: repeat(2, 32rem);
     gap: 2rem; }
     .homepage-grid .homepage-tech .tech-cards-grid:not(:last-of-type) {
       margin-bottom: 4rem; }
@@ -299,5 +370,6 @@ a, .homepage-grid .homepage-projects-heading a {
   .dark-mode .header-main {
     background-color: var(--dark-mode); }
   .dark-mode .tech-details-list
-, .dark-mode .tech-details-paragraph {
+, .dark-mode .tech-details-paragraph
+, .dark-mode .homepage-contact-modal {
     background-color: var(--dark-mode-tech-card) !important; }

@@ -1,5 +1,5 @@
 /* Tech Card */
-    $tech-cards-width: 30rem;
+    $tech-cards-width: 32rem;
     $tech-cards-height: 11rem;
     $tech-card-translateX: 3.5rem;
 
@@ -13,7 +13,7 @@
 
         .tech-details-list
         ,.tech-details-paragraph {
-            width: 27.5rem;
+            width: $tech-cards-width;
             height: $tech-cards-height;
 
             text-align: left;
@@ -121,5 +121,6 @@
             aside {padding: .2rem 1rem;}
         }
 
+        a {box-shadow: $box-shadow;}
         img {width: 100%;}
     }
