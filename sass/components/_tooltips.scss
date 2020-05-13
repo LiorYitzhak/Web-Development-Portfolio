@@ -1,0 +1,22 @@
+.in-dev {
+    position: relative;
+
+    &:hover::after
+    ,&:focus::after {
+        content: "בשלבי פיתוח";
+
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translate(50%, 110%);
+
+        font-size: $main-font-size;
+        font-family: 'Assistant', sans-serif;
+        color: var(--dark-mode);
+        background-color: $brand;
+        padding: .25rem 1rem;
+        border-radius: $main-border-radius / 2;
+
+        white-space: nowrap;
+    }
+}

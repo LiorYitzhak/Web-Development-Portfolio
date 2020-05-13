@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Layout */
 /* Colors */
 :root {
@@ -80,6 +81,7 @@ ul {
 
 button {
   cursor: pointer;
+  font-family: 'Assistant', sans-serif;
   color: currentColor;
   padding: 0;
   background-color: transparent;
@@ -106,8 +108,10 @@ input[type=submit] {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .header-main nav .nav-right a:not(:last-of-type) {
+    .header-main nav .nav-right a {
       margin-left: 6rem; }
+    .header-main nav .nav-right button {
+      font-size: inherit; }
     .header-main nav .nav-left {
       display: flex;
       align-items: center;
@@ -280,6 +284,22 @@ h1::before
 .input-group textarea {
   resize: none;
   font-family: inherit; }
+
+.in-dev {
+  position: relative; }
+  .in-dev:hover::after, .in-dev:focus::after {
+    content: "בשלבי פיתוח";
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 110%);
+    font-size: 1.6rem;
+    font-family: 'Assistant', sans-serif;
+    color: var(--dark-mode);
+    background-color: #FFC491;
+    padding: .25rem 1rem;
+    border-radius: 0.25rem;
+    white-space: nowrap; }
 
 .modal-screen {
   width: 100vw;

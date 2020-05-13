@@ -18,8 +18,12 @@
         align-items: center;
 
         .nav-right {
-            a:not(:last-of-type) {
+            a {
                 margin-left: $main-components-gap * 3;
+            }
+
+            button {
+                font-size: inherit;
             }
         }
 

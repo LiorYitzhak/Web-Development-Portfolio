@@ -3,8 +3,8 @@ const body                  = document.body;
 
 const darkModeBtn           = body.querySelector('#dark-mode-icon');
 
-const contactBtn            = body.querySelector('.btn-contact');
-const modalScreens        = Array.from(body.querySelectorAll('.contact-modal-screen'));
+const contactBtns           = Array.from(body.querySelectorAll('.btn-contact'));
+const modalScreens          = Array.from(body.querySelectorAll('.contact-modal-screen'));
 const contactModalScreen    = body.querySelector('.contact-modal-screen'); 
 const closeModalBtn         = body.querySelector('.close-modal'); 
 
@@ -25,8 +25,10 @@ darkModeBtn.addEventListener('click', () => {
     else {localStorage.removeItem('theme');}
 });
 
-contactBtn.addEventListener('click', () => {
-    contactModalScreen.style.display = 'flex';
+contactBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        contactModalScreen.style.display = 'flex';
+    });
 });
 
 closeModalBtn.addEventListener('click', () => {
