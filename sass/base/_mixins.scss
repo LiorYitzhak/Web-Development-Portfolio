@@ -1,0 +1,13 @@
+$breakpoint-1: 2100px;
+$breakpoint-2: 1880px;
+$breakpoint-3: 1580px;
+$breakpoint-4: 1380px;
+$breakpoint-5: 1130px;
+$breakpoint-6: 750px;
+$breakpoint-7: 550px;
+
+@mixin respond ($function, $breakpoint) {
+    @media screen and ($function: $breakpoint) {
+        @content
+    }
+}

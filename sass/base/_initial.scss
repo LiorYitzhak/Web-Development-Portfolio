@@ -13,6 +13,10 @@ main, section, article, aside
 
 :root {
     font-size: 10px;
+
+    @include respond(min-width, $breakpoint-1) {
+        font-size: 12px;
+    }
 }
 
 body {

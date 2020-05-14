@@ -1,8 +1,8 @@
 /* Resources Bubble */
-    $resources-bubble-svg-size: 8rem;
+    $resources-bubble-width: 8rem;
     
     .resources-bubble {
-        width: $resources-bubble-svg-size;
+        width: $resources-bubble-width;
 
         direction: ltr;
 
@@ -18,8 +18,8 @@
 
             svg
             ,img {
-                width: $resources-bubble-svg-size;
-                height: $resources-bubble-svg-size;
+                width: $resources-bubble-width;
+                height: $resources-bubble-width;
 
                 border-radius: $main-border-radius;
                 margin-bottom: $main-components-gap / 4;

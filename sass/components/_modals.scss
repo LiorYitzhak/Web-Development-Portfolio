@@ -2,8 +2,6 @@
     width: 100vw;
     height: 100vh;
 
-    min-width: 800px;
-
     position: fixed;
     top: 0;
     z-index: 2;
@@ -22,15 +20,23 @@
 
         background-color: var(--light-mode);
         padding: 3rem;
-        padding-top: 4rem;
+        padding-top: 6rem;
         border-radius: $main-border-radius;
+
+        @include respond(max-width, $breakpoint-6) {
+            flex-basis: 100vw;
+            height: 100vh;
+
+            padding-left: 4.5rem;
+            overflow-y: auto;
+        }
 
         .close-modal {
             position: absolute;
             top: .5rem;
             right: 1rem;
 
-            font-size: $main-font-size * 1.5;
+            font-size: 3rem;
             color: currentColor;
         }
 

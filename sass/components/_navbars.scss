@@ -1,3 +1,5 @@
+$header-height: 8rem;
+
 .header-main {
     position: fixed;
     top: 0;
@@ -10,12 +12,86 @@
     background-color: var(--light-mode);
     // box-shadow: $box-shadow;
 
+    .header-responsive {
+        height: $header-height;
+        display: none;
+
+        .hamburger-icon {
+            svg {
+                width: 2rem;
+                transform: rotateZ(180deg);
+            }
+        }
+
+        @include respond(max-width, $breakpoint-6) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
     nav {
-        height: 8rem;
+        height: $header-height;
         
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include respond(min-width, $breakpoint-6) {
+            transform: translateX(0) !important;
+            
+            .close-header-main {
+                display: none;
+            }
+        }
+
+        @include respond(max-width, $breakpoint-6) {
+            height: 100vh;
+            width: 22.5rem;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            background-color: var(--light-mode);
+            box-shadow: $box-shadow;
+            
+            transform: translateX(100%);
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+
+            .nav-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+
+                a
+                ,button:not(:first-of-type) {
+                    margin: 2.5rem;
+                }
+
+                a:first-of-type {
+                    margin-top: 5.5rem;
+                }
+
+                .close-header-main {
+                    display: block;
+                    
+                    position: absolute;
+                    top: .5rem;
+                    left: 1rem;
+
+                    font-size: 3rem;
+                }
+            }
+
+            .nav-left {
+                button {
+                    margin: 2.5rem 2.5rem 0 0;
+                }
+            }
+        }
 
         .nav-right {
             a {

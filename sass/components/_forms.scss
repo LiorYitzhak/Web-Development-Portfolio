@@ -16,6 +16,10 @@
         padding: 1rem;
         border: 1px solid $form-border-color;
         border-radius: $main-border-radius;
+
+        @include respond(max-width, $breakpoint-7) {
+            padding: .5em;
+        }
     }
 
     // input {

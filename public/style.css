@@ -27,6 +27,9 @@ main:focus, section:focus, article:focus, aside:focus
 
 :root {
   font-size: 10px; }
+  @media screen and (min-width: 2100px) {
+    :root {
+      font-size: 12px; } }
 
 body {
   position: relative;
@@ -103,11 +106,57 @@ input[type=submit] {
   padding: 0 5%;
   z-index: 1;
   background-color: var(--light-mode); }
+  .header-main .header-responsive {
+    height: 8rem;
+    display: none; }
+    .header-main .header-responsive .hamburger-icon svg {
+      width: 2rem;
+      transform: rotateZ(180deg); }
+    @media screen and (max-width: 750px) {
+      .header-main .header-responsive {
+        display: flex;
+        align-items: center; } }
   .header-main nav {
     height: 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media screen and (min-width: 750px) {
+      .header-main nav {
+        transform: translateX(0) !important; }
+        .header-main nav .close-header-main {
+          display: none; } }
+    @media screen and (max-width: 750px) {
+      .header-main nav {
+        height: 100vh;
+        width: 22.5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--light-mode);
+        box-shadow: 0.75rem 0.75rem 1.25rem rgba(0, 0, 0, 0.06);
+        transform: translateX(100%);
+        flex-direction: column;
+        justify-content: start;
+        align-items: start; }
+        .header-main nav .nav-right {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start; }
+          .header-main nav .nav-right a
+, .header-main nav .nav-right button:not(:first-of-type) {
+            margin: 2.5rem; }
+          .header-main nav .nav-right a:first-of-type {
+            margin-top: 5.5rem; }
+          .header-main nav .nav-right .close-header-main {
+            display: block;
+            position: absolute;
+            top: .5rem;
+            left: 1rem;
+            font-size: 3rem; }
+        .header-main nav .nav-left button {
+          margin: 2.5rem 2.5rem 0 0; } }
     .header-main nav .nav-right a {
       margin-left: 6rem; }
     .header-main nav .nav-right button {
@@ -224,13 +273,20 @@ h1::before
 .homepage-project-card {
   display: grid;
   grid-template-columns: 0.65fr 0.35fr;
-  gap: 1rem 3rem; }
+  gap: 1rem 3rem;
+  position: relative; }
   .homepage-project-card .heading {
     grid-area: 1/1/2/2; }
   .homepage-project-card a {
     grid-area: 2/1/3/2; }
   .homepage-project-card p {
     grid-area: 2/2/3/3; }
+  @media screen and (max-width: 1880px) {
+    .homepage-project-card {
+      display: block; }
+      .homepage-project-card .heading
+, .homepage-project-card a {
+        margin-bottom: 1rem; } }
   .homepage-project-card h4, .homepage-project-card p {
     margin: 0; }
   .homepage-project-card .heading {
@@ -280,6 +336,10 @@ h1::before
   padding: 1rem;
   border: 1px solid rgba(68, 68, 68, 0.25);
   border-radius: 0.5rem; }
+  @media screen and (max-width: 550px) {
+    .input-group input
+, .input-group textarea {
+      padding: .5em; } }
 
 .input-group textarea {
   resize: none;
@@ -304,7 +364,6 @@ h1::before
 .modal-screen {
   width: 100vw;
   height: 100vh;
-  min-width: 800px;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -317,13 +376,19 @@ h1::before
     position: relative;
     background-color: var(--light-mode);
     padding: 3rem;
-    padding-top: 4rem;
+    padding-top: 6rem;
     border-radius: 0.5rem; }
+    @media screen and (max-width: 750px) {
+      .modal-screen .homepage-contact-modal {
+        flex-basis: 100vw;
+        height: 100vh;
+        padding-left: 4.5rem;
+        overflow-y: auto; } }
     .modal-screen .homepage-contact-modal .close-modal {
       position: absolute;
       top: .5rem;
       right: 1rem;
-      font-size: 2.4rem;
+      font-size: 3rem;
       color: currentColor; }
     .modal-screen .homepage-contact-modal h2 {
       font-size: 6.4rem;
@@ -341,6 +406,13 @@ h1::before
   grid-template-columns: 1.25fr 0.75fr;
   column-gap: 4rem;
   margin: 12rem 0; }
+  @media screen and (max-width: 1380px) {
+    .homepage-grid {
+      grid-template-columns: 1fr; }
+      .homepage-grid .homepage-tech {
+        grid-area: 2/1/3/2; }
+      .homepage-grid .homepage-projects {
+        grid-area: 3/1/4/2; } }
   .homepage-grid h1 {
     line-height: .75; }
   .homepage-grid .h1-secondary {
@@ -355,6 +427,9 @@ h1::before
   .homepage-grid .homepage-tech
 , .homepage-grid .homepage-projects {
     padding-top: 8rem; }
+  @media screen and (max-width: 1380px) {
+    .homepage-grid .homepage-resources {
+      padding-top: 8rem; } }
   .homepage-grid .homepage-resources-heading
 , .homepage-grid .homepage-projects-heading {
     display: flex;
@@ -367,29 +442,66 @@ a, .homepage-grid .homepage-projects-heading a {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem; }
+    @media screen and (max-width: 1580px) {
+      .homepage-grid .homepage-resources ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center; } }
+    @media screen and (max-width: 1380px) {
+      .homepage-grid .homepage-resources ul {
+        display: flex;
+        justify-content: space-between; } }
+    @media screen and (max-width: 750px) {
+      .homepage-grid .homepage-resources ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); } }
   .homepage-grid .homepage-tech .tech-cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 32rem);
     gap: 2rem; }
+    @media screen and (max-width: 1380px) {
+      .homepage-grid .homepage-tech .tech-cards-grid {
+        grid-template-columns: repeat(3, 32rem);
+        justify-content: space-between; } }
+    @media screen and (max-width: 1130px) {
+      .homepage-grid .homepage-tech .tech-cards-grid {
+        grid-template-columns: repeat(2, 32rem);
+        justify-content: start; } }
+    @media screen and (max-width: 750px) {
+      .homepage-grid .homepage-tech .tech-cards-grid {
+        grid-template-columns: 1fr; } }
     .homepage-grid .homepage-tech .tech-cards-grid:not(:last-of-type) {
       margin-bottom: 4rem; }
+  @media screen and (max-width: 1380px) {
+    .homepage-grid .homepage-projects ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 4rem; } }
+  @media screen and (max-width: 750px) {
+    .homepage-grid .homepage-projects ul {
+      display: block; } }
   .homepage-grid .homepage-projects .homepage-project-card {
     margin-bottom: 4rem; }
-    .homepage-grid .homepage-projects .homepage-project-card:nth-of-type(even) {
-      direction: ltr; }
-      .homepage-grid .homepage-projects .homepage-project-card:nth-of-type(even) .heading {
-        flex-direction: row; }
-      .homepage-grid .homepage-projects .homepage-project-card:nth-of-type(even) p {
-        direction: rtl; }
+    @media screen and (min-width: 1880px) {
+      .homepage-grid .homepage-projects .homepage-project-card:nth-of-type(even) {
+        direction: ltr; }
+        .homepage-grid .homepage-projects .homepage-project-card:nth-of-type(even) .heading {
+          flex-direction: row; }
+        .homepage-grid .homepage-projects .homepage-project-card:nth-of-type(even) p {
+          direction: rtl; } }
     .homepage-grid .homepage-projects .homepage-project-card:last-of-type {
       margin-bottom: 8rem; }
 
 .dark-mode {
   background-color: var(--dark-mode);
   color: var(--dark-mode-text); }
-  .dark-mode .header-main {
+  .dark-mode .header-main, .dark-mode .header-main nav {
     background-color: var(--dark-mode); }
   .dark-mode .tech-details-list
 , .dark-mode .tech-details-paragraph
 , .dark-mode .homepage-contact-modal {
     background-color: var(--dark-mode-tech-card) !important; }
+  .dark-mode input:not([type=submit])
+, .dark-mode textarea {
+    background-color: var(--dark-mode);
+    border: 1px solid rgba(255, 255, 255, 0.25); }

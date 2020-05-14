@@ -3,12 +3,21 @@
     color: var(--dark-mode-text);
 
     .header-main {
-        background-color: var(--dark-mode);
+        &
+        ,nav {
+            background-color: var(--dark-mode);
+        }        
     }
 
     .tech-details-list
     ,.tech-details-paragraph
     ,.homepage-contact-modal {
         background-color: var(--dark-mode-tech-card) !important;
+    }
+
+    input:not([type=submit])
+    ,textarea {
+        background-color: var(--dark-mode);
+        border: 1px solid rgba(255,255,255,.25);
     }
 }
