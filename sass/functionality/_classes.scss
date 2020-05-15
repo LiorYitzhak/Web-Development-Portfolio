@@ -3,10 +3,13 @@
     color: var(--dark-mode-text);
 
     .header-main {
-        &
-        ,nav {
-            background-color: var(--dark-mode);
-        }        
+        background-color: var(--dark-mode);
+
+        @include respond(max-width, $breakpoint-6) {
+            nav {
+                background-color: var(--dark-mode);
+            }
+        }       
     }
 
     .tech-details-list

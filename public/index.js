@@ -7,10 +7,12 @@ const mainHeaderCloseBtn    = body.querySelector('.close-header-main');
 
 const darkModeBtn           = body.querySelector('#dark-mode-icon');
 
-const contactBtns           = Array.from(body.querySelectorAll('.btn-contact'));
-const modalScreens          = Array.from(body.querySelectorAll('.contact-modal-screen'));
-const contactModalScreen    = body.querySelector('.contact-modal-screen'); 
+const modalScreen           = body.querySelector('.modal-screen');
 const closeModalBtn         = body.querySelector('.close-modal');
+
+const contactBtns           = Array.from(body.querySelectorAll('.btn-contact'));
+const contactModalScreen    = body.querySelector('.contact-modal-screen');
+const contactModal          = body.querySelector('.homepage-contact-modal');
 
 function addClass(arr, className) {
     arr.forEach(element => element.classList.add(className));
@@ -39,14 +41,19 @@ darkModeBtn.addEventListener('click', () => {
 
 contactBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-        contactModalScreen.style.display = 'flex';
+        contactModalScreen.style.display    = 'flex';
+        modalScreen.style.animation         = 'fade-in 150ms';
+        contactModal.style.animation        = 'scale-in 250ms';
     });
 });
 
 closeModalBtn.addEventListener('click', () => {
-    modalScreens.forEach((modalScreen) => {
+    contactModal.style.animation    = 'scale-out 250ms forwards';
+    modalScreen.style.animation     = 'fade-out 250ms forwards';
+
+    setTimeout(() => {
         modalScreen.style.display = 'none';
-    });
+    }, 250);
 });
 
 const theme = localStorage.getItem('theme');

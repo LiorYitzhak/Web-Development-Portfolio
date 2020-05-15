@@ -12,6 +12,10 @@
         .homepage-projects      {grid-area: 3/1/4/2}
     }
 
+    @include respond(max-width, $breakpoint-6) {
+        margin: ($main-components-gap * 4.5) 0;
+    }
+
     h1 {line-height: .75;}
     .h1-secondary {
         display: block;
@@ -19,10 +23,7 @@
     }
 
     main {
-        p {
-            min-width: 25rem;
-            max-width: 45rem;
-        }
+        p {max-width: 45rem;}
         
         .btn
         ,.btn-inverse {
@@ -126,8 +127,16 @@
                 }
             }
 
-            &:last-of-type {
+            @include respond(max-width, $breakpoint-6) {
                 margin-bottom: $main-components-gap * 4;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
             }
         }
     }

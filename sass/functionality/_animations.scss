@@ -1,0 +1,158 @@
+body.homepage {
+    &
+    ,.header-main
+    ,.header-main nav
+    ,.tech-details-list
+    ,.tech-details-paragraph
+    ,input:not([type=submit])
+    ,textarea {
+        transition: background-color 175ms ease-in-out
+                    ,color 100ms ease;
+    }
+
+    .header-main {
+        .hamburger-icon {
+            svg {
+                animation: slide-up 1000ms 200ms $easing-function backwards;
+            }
+        }
+
+        nav {
+            transition: transform 300ms $easing-function-2;
+
+            .nav-right {
+                a:nth-of-type(1) {animation: slide-up 1000ms 200ms $easing-function backwards;}
+                a:nth-of-type(2) {animation: slide-up 1000ms 400ms $easing-function backwards;}
+                a:nth-of-type(3) {animation: slide-up 1000ms 600ms $easing-function backwards;}
+                button           {animation: slide-up 1000ms 800ms $easing-function backwards;}
+            }
+
+            .nav-left {
+                button:nth-of-type(1) {animation: slide-up 1000ms 1000ms $easing-function backwards;}
+                button:nth-of-type(2) {animation: slide-up 1000ms 1200ms $easing-function backwards;}
+            }
+        }
+    }
+
+    main a
+    ,.go-to-page {
+        &:hover
+        ,&:focus {
+            svg {
+                transform: rotateZ(360deg);
+                transition: transform 1000ms $easing-function;
+            }
+        }
+    }
+
+    main {
+        h1      {animation: fade-in 600ms 700ms ease-in backwards;}
+        
+        p {
+            animation: clip-path-rtl 1250ms 700ms $easing-function-2 backwards
+                       ,slide-left 1250ms 700ms $easing-function-2 backwards;
+        }
+
+        button  {animation: slide-up 1500ms 1450ms $easing-function backwards;}
+        a       {animation: slide-up 1500ms 1650ms $easing-function backwards;}
+    }
+
+    .homepage-tech
+    ,.homepage-resources
+    ,.homepage-projects {
+        animation: clip-path-rtl 1750ms 700ms $easing-function-2 backwards
+                   ,slide-left 1750ms 700ms $easing-function-2 backwards;
+    }
+
+    .btn {
+        transition: transform 150ms
+                    ,box-shadow 100ms;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 2px 2px 1rem $shadow;
+        }
+
+        &:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+    }
+
+    .in-dev:hover::after
+    ,.in-dev:focus::after {
+        animation: fade-in 150ms;
+    }
+}
+
+@keyframes fade-in {
+    from    {opacity: 0;}
+    to      {opacity: 1;}
+}
+
+@keyframes fade-out {
+    from    {opacity: 1;}
+    to      {opacity: 0;}
+}
+
+@keyframes scale-in {
+    from    {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to      {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-out {
+    from    {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    to      {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes slide-up {
+    from    {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    to    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-left {
+    from    {
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+
+    to    {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes clip-path-rtl {
+    from {
+        opacity: 0;
+        clip-path: inset(0 0 0 100%);
+    }
+    
+    65% {opacity: 1;}
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}

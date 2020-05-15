@@ -17,10 +17,7 @@ $header-height: 8rem;
         display: none;
 
         .hamburger-icon {
-            svg {
-                width: 2rem;
-                transform: rotateZ(180deg);
-            }
+            svg {width: 2rem;}
         }
 
         @include respond(max-width, $breakpoint-6) {
