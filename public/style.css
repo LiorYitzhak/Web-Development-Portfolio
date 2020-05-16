@@ -334,7 +334,7 @@ h1::before
 , .input-group textarea {
   width: 100%;
   display: block;
-  color: var(--light-mode-text);
+  color: currentColor;
   font-size: inherit;
   padding: 1rem;
   border: 1px solid rgba(68, 68, 68, 0.25);
