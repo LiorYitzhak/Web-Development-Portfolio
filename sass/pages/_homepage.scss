@@ -13,7 +13,7 @@
     }
 
     @include respond(max-width, $breakpoint-6) {
-        margin: ($main-components-gap * 4.5) 0;
+        margin: ($main-components-gap * 4) 0;
     }
 
     h1 {line-height: .75;}

@@ -34,7 +34,7 @@ body.homepage {
         }
     }
 
-    main a
+    .discover-btn
     ,.go-to-page {
         &:hover
         ,&:focus {
@@ -46,7 +46,7 @@ body.homepage {
     }
 
     main {
-        h1      {animation: fade-in 600ms 700ms ease-in backwards;}
+        h1 {animation: fade-in 600ms 700ms ease-in backwards;}
         
         p {
             animation: clip-path-rtl 1250ms 700ms $easing-function-2 backwards
