@@ -428,7 +428,7 @@ body::-webkit-scrollbar-thumb {
         grid-area: 3/1/4/2; } }
   @media screen and (max-width: 750px) {
     .homepage-grid {
-      margin: 8rem 0; } }
+      margin: 6.5rem 0; } }
   .homepage-grid h1 {
     line-height: .75; }
   .homepage-grid .h1-secondary {
