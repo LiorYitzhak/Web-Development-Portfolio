@@ -67,24 +67,27 @@ h3, h4 {
 p {
   margin-bottom: 2rem; }
 
+ul {
+  list-style: none; }
+
 a:link
-, a:visited {
+, a:visited
+, .btn-with-text-and-icon {
   color: currentColor;
   text-decoration: none;
   display: inline-flex;
   align-items: center; }
   a:link
-svg, a:visited svg {
+svg, a:visited
+svg, .btn-with-text-and-icon svg {
     width: 1.44rem;
     height: 1.44rem;
     margin-right: 0.5rem; }
 
-ul {
-  list-style: none; }
-
 button {
   cursor: pointer;
   font-family: 'Assistant', sans-serif;
+  font-size: 1.6rem;
   color: currentColor;
   padding: 0;
   background-color: transparent;
@@ -400,6 +403,16 @@ h1::before
     .modal-screen .homepage-contact-modal form .btn {
       padding: .75rem 5rem; }
 
+body::-webkit-scrollbar {
+  width: .5rem; }
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.06); }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #FFC491;
+  border-radius: 2.5rem; }
+
 .homepage-grid {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -556,7 +569,7 @@ body.homepage main p {
 body.homepage main button {
   animation: slide-up 1500ms 1450ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards; }
 
-body.homepage main a {
+body.homepage main .discover-btn {
   animation: slide-up 1500ms 1650ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards; }
 
 body.homepage .homepage-tech

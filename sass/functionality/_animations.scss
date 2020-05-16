@@ -54,7 +54,7 @@ body.homepage {
         }
 
         button  {animation: slide-up 1500ms 1450ms $easing-function backwards;}
-        a       {animation: slide-up 1500ms 1650ms $easing-function backwards;}
+        .discover-btn       {animation: slide-up 1500ms 1650ms $easing-function backwards;}
     }
 
     .homepage-tech

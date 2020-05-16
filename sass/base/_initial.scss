@@ -57,8 +57,13 @@ p {
     margin-bottom: $main-components-gap;
 }
 
+ul {
+    list-style: none;
+}
+
 a:link
-,a:visited {
+,a:visited
+,.btn-with-text-and-icon {
     color: currentColor;
     text-decoration: none;
 
@@ -72,14 +77,11 @@ a:link
     }
 }
 
-ul {
-    list-style: none;
-}
-
 button {
     cursor: pointer;
     
     font-family: 'Assistant', sans-serif;
+    font-size: $main-font-size;
     color: currentColor;
     padding: 0;
     background-color: transparent;
