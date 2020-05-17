@@ -576,7 +576,7 @@ body.homepage main .discover-btn {
 body.homepage .homepage-tech
 , body.homepage .homepage-resources
 , body.homepage .homepage-projects {
-  animation: clip-path-rtl 1750ms 700ms cubic-bezier(0.785, 0.135, 0.15, 0.86) backwards, slide-left 1750ms 700ms cubic-bezier(0.785, 0.135, 0.15, 0.86) backwards; }
+  animation: slide-left 1750ms 1250ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards; }
 
 body.homepage .btn {
   transition: transform 150ms ,box-shadow 100ms; }

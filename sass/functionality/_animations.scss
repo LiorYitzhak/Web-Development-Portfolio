@@ -60,8 +60,7 @@ body.homepage {
     .homepage-tech
     ,.homepage-resources
     ,.homepage-projects {
-        animation: clip-path-rtl 1750ms 700ms $easing-function-2 backwards
-                   ,slide-left 1750ms 700ms $easing-function-2 backwards;
+        animation: slide-left 1750ms 1250ms $easing-function backwards;
     }
 
     .btn {
