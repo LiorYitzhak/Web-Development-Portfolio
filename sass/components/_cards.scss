@@ -24,6 +24,10 @@
             box-shadow: $box-shadow;
         }
 
+        .tech-details-list {
+            direction: ltr;
+        }
+
         .tech-details-paragraph {
             text-align: right;
             padding: 1rem 6rem 1rem 2rem;
@@ -129,7 +133,8 @@
 
             h4 {font-size: $h3-font-size;}
 
-            .view-code {
+            aside
+            ,.view-code {
                 padding: .2rem 1rem;
                 color: var(--dark-mode);
             }

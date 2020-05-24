@@ -7,7 +7,8 @@
   --light-mode-tech-card:#FDFDFD;
   --dark-mode:      #222;
   --dark-mode-text: #FFF;
-  --dark-mode-tech-card: #242424; }
+  --dark-mode-tech-card: #242424;
+  --dark-mode-footer:#2b2b2b; }
 
 /* Typography */
 /* Effects */
@@ -70,14 +71,16 @@ p {
 ul {
   list-style: none; }
 
-a:link
+a
+, a:link
 , a:visited
 , .btn-with-text-and-icon {
   color: currentColor;
   text-decoration: none;
   display: inline-flex;
   align-items: center; }
-  a:link
+  a
+svg, a:link
 svg, a:visited
 svg, .btn-with-text-and-icon svg {
     width: 1.44rem;
@@ -220,6 +223,8 @@ h1::before
     background-color: var(--light-mode-tech-card);
     border-radius: 1rem;
     box-shadow: 0.75rem 0.75rem 1.25rem rgba(0, 0, 0, 0.06); }
+  .tech-card .tech-details-list {
+    direction: ltr; }
   .tech-card .tech-details-paragraph {
     text-align: right;
     padding: 1rem 6rem 1rem 2rem; }
@@ -298,7 +303,8 @@ h1::before
     align-items: center; }
     .homepage-project-card .heading h4 {
       font-size: 2rem; }
-    .homepage-project-card .heading .view-code {
+    .homepage-project-card .heading aside
+, .homepage-project-card .heading .view-code {
       padding: .2rem 1rem;
       color: var(--dark-mode); }
   .homepage-project-card .live-version {
@@ -414,6 +420,14 @@ body::-webkit-scrollbar-thumb {
   background-color: #FFC491;
   border-radius: 2.5rem; }
 
+footer p {
+  margin: 0; }
+
+.footer-main {
+  color: var(--dark-mode-text);
+  padding: 2rem 5%;
+  background-color: var(--dark-mode); }
+
 .homepage-grid {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -528,6 +542,8 @@ a, .homepage-grid .homepage-projects-heading a {
 , .dark-mode textarea {
     background-color: var(--dark-mode);
     border: 1px solid rgba(255, 255, 255, 0.25); }
+  .dark-mode .footer-main {
+    background-color: var(--dark-mode-footer); }
 
 body.homepage, body.homepage .header-main
 , body.homepage .header-main nav

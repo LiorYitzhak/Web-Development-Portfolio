@@ -1,0 +1,9 @@
+footer {
+    p {margin: 0;}
+}
+
+.footer-main {
+    color: var(--dark-mode-text);
+    padding: 2rem $screen-gap;
+    background-color: var(--dark-mode);
+}
