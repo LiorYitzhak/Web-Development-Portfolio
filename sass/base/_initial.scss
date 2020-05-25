@@ -1,4 +1,4 @@
-body, header, nav, div, a, svg
+html, body, header, nav, div, a, svg
 main, section, article, aside
 ,h1, h2, h3, h4, p, ul, li, button
 ,form, input, textarea, footer {
@@ -13,6 +13,7 @@ main, section, article, aside
 
 :root {
     font-size: 10px;
+    overflow-x: hidden;
 
     @include respond(min-width, $breakpoint-1) {
         font-size: 12px;
