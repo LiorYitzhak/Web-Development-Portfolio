@@ -41,7 +41,7 @@ darkModeBtn.addEventListener('click', () => {
 
 contactBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-        body.style.overflowY = 'hidden';
+        root.style.overflowY = 'hidden';
         contactModalScreen.style.display    = 'flex';
         modalScreen.style.animation         = 'fade-in 150ms';
         contactModal.style.animation        = 'scale-in 250ms';
@@ -49,7 +49,7 @@ contactBtns.forEach((btn) => {
 });
 
 closeModalBtn.addEventListener('click', () => {
-    body.style.overflowY = 'auto';
+    root.style.overflowY = 'auto';
     contactModal.style.animation    = 'scale-out 250ms forwards';
     modalScreen.style.animation     = 'fade-out 250ms forwards';
 
