@@ -16,14 +16,14 @@
 body, header, nav, div, a, svg
 main, section, article, aside
 , h1, h2, h3, h4, p, ul, li, button
-, form, input, textarea {
+, form, input, textarea, footer {
   padding: 0;
   margin: 0;
   box-sizing: inherit; }
   body:focus, header:focus, nav:focus, div:focus, a:focus, svg
 main:focus, section:focus, article:focus, aside:focus
 , h1:focus, h2:focus, h3:focus, h4:focus, p:focus, ul:focus, li:focus, button:focus
-, form:focus, input:focus, textarea:focus {
+, form:focus, input:focus, textarea:focus, footer:focus {
     outline: 2px solid rgba(255, 196, 145, 0.5); }
 
 :root {
@@ -34,6 +34,7 @@ main:focus, section:focus, article:focus, aside:focus
 
 body {
   position: relative;
+  overflow-x: hidden;
   box-sizing: border-box;
   font-family: 'Assistant', sans-serif;
   font-size: 1.6rem;
@@ -551,7 +552,7 @@ body.homepage, body.homepage .header-main
 , body.homepage .tech-details-paragraph
 , body.homepage input:not([type=submit])
 , body.homepage textarea {
-  transition: background-color 175ms ease-in-out ,color 100ms ease; }
+  transition: background-color 250ms ease-in-out ,color 150ms ease; }
 
 body.homepage .header-main .hamburger-icon svg {
   animation: slide-up 1000ms 200ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards; }

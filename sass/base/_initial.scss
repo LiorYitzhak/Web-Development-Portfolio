@@ -1,7 +1,7 @@
 body, header, nav, div, a, svg
 main, section, article, aside
 ,h1, h2, h3, h4, p, ul, li, button
-,form, input, textarea {
+,form, input, textarea, footer {
     padding: 0;
     margin: 0;
     box-sizing: inherit;
@@ -21,6 +21,7 @@ main, section, article, aside
 
 body {
     position: relative;
+    overflow-x: hidden;
 
     box-sizing: border-box;
 

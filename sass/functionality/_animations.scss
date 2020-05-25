@@ -6,8 +6,8 @@ body.homepage {
     ,.tech-details-paragraph
     ,input:not([type=submit])
     ,textarea {
-        transition: background-color 175ms ease-in-out
-                    ,color 100ms ease;
+        transition: background-color 250ms ease-in-out
+                    ,color 150ms ease;
     }
 
     .header-main {
